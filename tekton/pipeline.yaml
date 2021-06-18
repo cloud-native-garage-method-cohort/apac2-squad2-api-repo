@@ -7,7 +7,7 @@ spec:
   - name: clone-repository
     params:
     - name: url
-      value: https://github.com/cloud-native-garage-method-cohort/buildah-pengli.git
+      value: https://github.com/cloud-native-garage-method-cohort/apac2-squad2-api-repo.git
     taskRef:
       kind: Task
       name: git-clone
@@ -19,7 +19,7 @@ spec:
       - clone-repository
     params:
     - name: IMAGE
-      value: "quay.io/pengli1707/express"
+      value: "quay.io/bdisonlin/buildah-assignments"
     taskRef:
       kind: Task
       name: buildah
@@ -31,11 +31,11 @@ spec:
     - build
     params:
     - name: image-with-tag
-      value: "quay.io/pengli1707/express:$(tasks.clone-repository.results.commit)"
+      value: "quay.io/bdisonlin/buildah-assignments:$(tasks.clone-repository.results.commit)"
     - name: app-namespace
-      value: "peng-li"
+      value: "final-project"
     - name: app-name
-      value: "pengli-pipeline-from-scratch"      
+      value: "bdisonlin-pipeline-from-scratch"      
     taskRef:
       kind: Task
       name: kustomize-build
@@ -47,9 +47,9 @@ spec:
     - kustomize-build
     params:
     - name: app-namespace
-      value: "peng-li"
+      value: "final-project"
     - name: app-name
-      value: "pengli-pipeline-from-scratch"
+      value: "bdisonlin-pipeline-from-scratch"
     taskRef:
       kind: Task
       name: test-deploy

@@ -35,7 +35,7 @@ metadata:
   name: deployer
 subjects:
   - kind: ServiceAccount
-    name: pipeline
+    name: deployer
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
