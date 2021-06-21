@@ -31,7 +31,7 @@ spec:
     - build
     params:
     - name: image-with-tag
-      value: "quay.io/bdisonlin/buildah-assignments:$(tasks.clone-repository.results.commit)"
+      value: "quay.io/bdisonlin/buildah-assignments"
     - name: app-namespace
       value: "final-project"
     - name: app-name
