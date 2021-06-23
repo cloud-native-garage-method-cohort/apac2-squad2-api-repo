@@ -9,5 +9,5 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY ./app/src/ .
 EXPOSE 5000
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
-# CMD [ "python", "./main.py" ]
+# CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python", "./app.py" ]
