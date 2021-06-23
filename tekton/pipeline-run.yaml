@@ -3,7 +3,7 @@ kind: PipelineRun
 metadata:
   generateName: clone-and-build-run-
 spec:
-  serviceAccountName: deployer
+  serviceAccountName: ctbc-deployer
   pipelineRef:
     name: clone-and-build
   workspaces:

@@ -33,7 +33,7 @@ spec:
     - name: image-with-tag
       value: "quay.io/bdisonlin/buildah-assignments"
     - name: app-namespace
-      value: "final-project"
+      value: "ctbc-project"
     - name: app-name
       value: "bdisonlin-pipeline-from-scratch"      
     taskRef:
@@ -47,7 +47,7 @@ spec:
     - kustomize-build
     params:
     - name: app-namespace
-      value: "final-project"
+      value: "ctbc-project"
     - name: app-name
       value: "bdisonlin-pipeline-from-scratch"
     taskRef:
