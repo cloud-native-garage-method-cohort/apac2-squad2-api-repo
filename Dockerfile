@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+# FROM ubuntu:16.04
 FROM python:3
 # FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
 # FROM python:3.8-slim-buster
